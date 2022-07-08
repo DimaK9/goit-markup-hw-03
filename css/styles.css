@@ -7,6 +7,7 @@ html {
     box-sizing: inherit;
 }
 
+/* Загальні стилі */
 :root {
 --main-font: 'Roboto', sans-serif;
 --main-text-color:  #212121;
@@ -21,27 +22,53 @@ body {
     font-size: 14px;
 }
 .container {
+    width: 1200px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
-    width: 1200px;
     outline: 2px solid tomato;
     outline-offset: 2px;
 }
-.header-list {
-    display: flex;
-}
-.h1, 
-.h2,
-.h3,
-.p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     margin: 0;
 }
+
 .list {
     list-style: none;
     text-decoration: none;
+    margin: 0;
+    padding: 0;
 }
+/*Секція Хедера*/
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.header-list {
+    display: flex;
+    gap: 50px;
+}
+.header-nav {
+    margin-right: auto;
+}
+
+.header-mail {
+    margin-right: 50px;
+}
+
+.link-logo {
+    margin-right: 93px;
+}
+
 .link-logo {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
@@ -66,6 +93,10 @@ body {
     letter-spacing: 0.02em;
     text-decoration: none;
 }
+.nav-link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
 .nav-link.active {
     color: var(--acent-color);
 }
@@ -83,9 +114,13 @@ body {
 .nav-link:active {
     color: red;
 }
+
+/* Головна секція */
 .main-section {
 background-color: var(--hero-and-footer-background-color); 
 text-align: center;
+padding-top: 209px;
+padding-bottom: 200px;
 }
 .main-title {
     font-weight: 900;
@@ -94,6 +129,10 @@ text-align: center;
     letter-spacing: 0.06em;
     color: #ffffff;
     text-transform: uppercase;
+    width: 696px;
+    margin-left: auto;
+    margin-bottom: 21px;
+    margin-right: auto;
 }
 .btn-large {
     border-radius: 4px;
@@ -112,16 +151,45 @@ text-align: center;
     cursor: pointer;
     background-color: var(--acent-color);
 }
+/* Секція переваг */
+
+.advantage-section {
+    padding: 94px 0;
+}
+.main-list {
+    display: flex;
+    gap: 50px;
+    flex-basis: 270px;
+}
 .title {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
     color: var(--main-text-color);
+
+    margin-bottom: 10px;
 }
-.text {
+.text-title {
     line-height: 1.71;
     color: var(--secondary-text-color);
+}
+/* Секція команди */
+.team-section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    background-color: #F5F4FA
+}
+.team-list {
+    display: flex;
+    gap: 30px;
+}
+
+.secondary-list {
+    display: flex;
+    gap: 30px;
+    padding-left: 0;
 }
 .secondary-title,
 .team-title {
@@ -130,6 +198,15 @@ text-align: center;
     line-height: 1.17;
     text-align: center;
     color: var(--main-text-color);
+    margin-bottom: 50px;
+}
+.secondary-title {
+    margin-bottom: 50px;
+}
+.team-box {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #ffffff;
 }
 .about-team-title {
     font-weight: 500;
@@ -137,6 +214,7 @@ text-align: center;
     line-height: 1.19;
     text-align: center;
     color: var(--main-text-color);
+    margin-bottom: 10px;
 }
 .profession {
     font-size: 16px;
@@ -173,7 +251,13 @@ color: #ffffff;
 }
 /* footer */
 .footer {
+padding-top: 60px;
+padding-bottom: 60px;
 background-color: var(--hero-and-footer-background-color);
+}
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 20px;
 }
 .footer-logo-color {
     color: #ffffff;
@@ -186,10 +270,17 @@ background-color: var(--hero-and-footer-background-color);
     text-decoration: none;
 }
 .footer-address {
+    display: inline-block;
+    margin-bottom: 9px;
+
     color: #ffffff;
     font-style: normal;
     line-height: 1.71;
     text-decoration: none;
+}
+.footer-mail {
+    display: inline-block;
+    margin-bottom: 9px;
 }
 .footer-mail:hover,
 .footer-mail:focus,
