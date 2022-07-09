@@ -27,8 +27,12 @@ body {
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
-    outline: 1px solid tomato;
-    outline-offset: 2px;
+
+    /* рамку виділення взяв у коментар, головне самому про це не забути */
+
+/* outline: 1px solid tomato;
+    outline-offset: 2px; */
+
 }
 h1,
 h2,
@@ -48,6 +52,9 @@ img {
     margin: 0;
     padding: 0;
 }
+.section {
+    padding: 94px 0;
+}
 /*Секція Хедера*/
 
 .header-container {
@@ -56,7 +63,8 @@ img {
 }
 .header {
     padding-top: 24px;
-    padding-bottom: 25px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #ECECEC;
 }
 .header-list {
     display: flex;
@@ -71,7 +79,7 @@ img {
     margin-right: auto;
 }
 
-.link-mail {
+.header-mail {
     margin-right: 50px;
 }
 .link-logo {
@@ -163,12 +171,11 @@ padding-bottom: 200px;
 /* Секція переваг */
 
 .advantage-section {
-    padding: 94px 0;
+    padding-bottom: 0;
 }
 .main-list {
     display: flex;
-    margin: 0;
-    padding-left: 0;
+    gap: 30px;
 }
 .title {
     font-weight: 700;
@@ -205,7 +212,6 @@ padding-bottom: 200px;
 .secondary-list {
     display: flex;
     gap: 30px;
-    padding-left: 0;
 }
 .secondary-title,
 .team-title {
@@ -260,7 +266,6 @@ background-color: var(--hero-and-footer-background-color);
 }
 .footer-address {
     display: inline-block;
-    margin-bottom: 9px;
 
     color: #ffffff;
     font-style: normal;
@@ -269,6 +274,9 @@ background-color: var(--hero-and-footer-background-color);
 }
 .footer-mail {
     display: inline-block;
+}
+.footer-list
+.item:not(:last-child) {
     margin-bottom: 9px;
 }
 .footer-mail:hover,
@@ -293,10 +301,7 @@ background-color: var(--hero-and-footer-background-color);
     line-height: 1.88;
     color: var(--secondary-text-color);
 }
-.portfolio-main {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
+
 .btn-portfolio {
     max-width: 145px;
     min-width: 73px;
@@ -319,6 +324,10 @@ background-color: var(--hero-and-footer-background-color);
     background-color: var(--acent-color);
     color: #ffffff;
 }
+.btn-portfolio.active-btn {
+    background-color: var(--acent-color);
+    color: #ffffff;
+}
 .portfolio-list {
     display: flex;
     gap: 8px;
@@ -335,5 +344,6 @@ background-color: var(--hero-and-footer-background-color);
     padding-right: 24px;
     padding-bottom: 20px;
     padding-left: 24px;
-    outline: 1px solid #EEEEEE;
+    border: 1px solid #EEEEEE;
+    border-top: none;
 }
